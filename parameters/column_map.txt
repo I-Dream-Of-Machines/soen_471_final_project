@@ -1,0 +1,185 @@
+CS_EC_V_NC_AA:INCOME AND BENEFITS (IN 2017 INFLATION-ADJUSTED DOLLARS)!!Families!!Median family income (dollars)
+CS_EC_V_NC_AB:INCOME AND BENEFITS (IN 2017 INFLATION-ADJUSTED DOLLARS)!!Families!!Mean family income (dollars)
+CS_EC_P_NC_AC:EMPLOYMENT STATUS!!Civilian labor force!!Unemployment Rate
+CS_EC_P_NC_AD:EMPLOYMENT STATUS!!Own children of the householder 6 to 17 years!!All parents in family in labor force
+CS_EC_P_NC_AE1:OCCUPATION!!Civilian employed population 16 years and over!!Management, business, science, and arts occupations
+CS_EC_P_NC_AE2:OCCUPATION!!Civilian employed population 16 years and over!!Service occupations
+CS_EC_P_NC_AE3:OCCUPATION!!Civilian employed population 16 years and over!!Sales and office occupations
+CS_EC_P_NC_AE4:OCCUPATION!!Civilian employed population 16 years and over!!Natural resources, construction, and maintenance occupations
+CS_EC_P_NC_AE5:OCCUPATION!!Civilian employed population 16 years and over!!Production, transportation, and material moving occupations
+CS_EC_P_NC_AF1:INDUSTRY!!Civilian employed population 16 years and over!!Agriculture, forestry, fishing and hunting, and mining
+CS_EC_P_NC_AF2:INDUSTRY!!Civilian employed population 16 years and over!!Construction
+CS_EC_P_NC_AF3:INDUSTRY!!Civilian employed population 16 years and over!!Manufacturing
+CS_EC_P_NC_AF4:INDUSTRY!!Civilian employed population 16 years and over!!Wholesale trade
+CS_EC_P_NC_AF5:INDUSTRY!!Civilian employed population 16 years and over!!Retail trade
+CS_EC_P_NC_AF6:INDUSTRY!!Civilian employed population 16 years and over!!Transportation and warehousing, and utilities
+CS_EC_P_NC_AF7:INDUSTRY!!Civilian employed population 16 years and over!!Information:
+CS_EC_P_NC_AF8:INDUSTRY!!Civilian employed population 16 years and over!!Finance and insurance, and real estate and rental and leasing
+CS_EC_P_NC_AF9:INDUSTRY!!Civilian employed population 16 years and over!!Professional, scientific, and management, and administrative and waste management services
+CS_EC_P_NC_AF10:INDUSTRY!!Civilian employed population 16 years and over!!Educational services, and health care and social assistance
+CS_EC_P_NC_AF11:INDUSTRY!!Civilian employed population 16 years and over!!Arts, entertainment, and recreation, and accommodation and food services
+CS_EC_P_NC_AF12:INDUSTRY!!Civilian employed population 16 years and over!!Other services, except public administration
+CS_EC_P_NC_AF13:INDUSTRY!!Civilian employed population 16 years and over!!Public administration
+CS_EC_P_C_AG1:INCOME AND BENEFITS (IN 2017 INFLATION-ADJUSTED DOLLARS)!!Families!!Less than $10,000
+CS_EC_P_C_AG2:INCOME AND BENEFITS (IN 2017 INFLATION-ADJUSTED DOLLARS)!!Families!!$10,000 to $14,999
+CS_EC_P_C_AG3:INCOME AND BENEFITS (IN 2017 INFLATION-ADJUSTED DOLLARS)!!Families!!$15,000 to $24,999
+CS_EC_P_C_AG4:INCOME AND BENEFITS (IN 2017 INFLATION-ADJUSTED DOLLARS)!!Families!!$25,000 to $34,999
+CS_EC_P_C_AG5:INCOME AND BENEFITS (IN 2017 INFLATION-ADJUSTED DOLLARS)!!Families!!$35,000 to $49,999
+CS_EC_P_C_AG6:INCOME AND BENEFITS (IN 2017 INFLATION-ADJUSTED DOLLARS)!!Families!!$50,000 to $74,999
+CS_EC_P_C_AG7:INCOME AND BENEFITS (IN 2017 INFLATION-ADJUSTED DOLLARS)!!Families!!$75,000 to $99,999
+CS_EC_P_C_AG8:INCOME AND BENEFITS (IN 2017 INFLATION-ADJUSTED DOLLARS)!!Families!!$100,000 to $149,999
+CS_EC_P_C_AG9:INCOME AND BENEFITS (IN 2017 INFLATION-ADJUSTED DOLLARS)!!Families!!$150,000 to $199,999
+CS_EC_P_C_AG10:INCOME AND BENEFITS (IN 2017 INFLATION-ADJUSTED DOLLARS)!!Families!!$200,000 or more:family_income_above_200000
+CS_EC_P_NC_AF:PERCENTAGE OF FAMILIES AND PEOPLE WHOSE INCOME IN THE PAST 12 MONTHS IS BELOW THE POVERTY LEVEL!!All families:_poverty_level
+CS_DG_V_NC_AG:SEX AND AGE!!Total population
+CS_DG_R_NC_AH:SEX AND AGE!!Total population!!Sex ratio (males per 100 females)
+CS_DG_V_NC_AI:SEX AND AGE!!Total population!!Median age (years)
+CS_DG_P_C_AJ1:RACE!!Total population!!One race!!White
+CS_DG_PC_AJ2:RACE!!Total population!!One race!!Black or African American
+CS_DG_PC_AJ3:RACE!!Total population!!One race!!American Indian and Alaska Native
+CS_DG_PC_AJ4:RACE!!Total population!!One race!!Asian
+CS_DG_P_C_AJ5:RACE!!Total population!!One race!!Native Hawaiian and Other Pacific Islander
+CS_DG_P_C_AJ6:RACE!!Total population!!Two or more races60
+CS_DG_P_C_AK1:SEX AND AGE!!Total population!!Under 5 years
+CS_DG_P_C_AK2:SEX AND AGE!!Total population!!5 to 9 years
+CS_DG_P_C_AK3:SEX AND AGE!!Total population!!10 to 14 years
+CS_DG_P_C_AK4:SEX AND AGE!!Total population!!15 to 19 years
+CS_DG_P_C_AK5:SEX AND AGE!!Total population!!20 to 24 years
+CS_DG_P_C_AK6:SEX AND AGE!!Total population!!25 to 34 years
+CS_DG_P_C_AK7:SEX AND AGE!!Total population!!35 to 44 years
+CS_DG_P_C_AK8:SEX AND AGE!!Total population!!45 to 54 years
+CS_DG_P_C_AK9:SEX AND AGE!!Total population!!55 to 59 years
+CS_DG_P_C_AK10:SEX AND AGE!!Total population!!60 to 64 years
+CS_DG_P_C_AK11:SEX AND AGE!!Total population!!65 to 74 years
+CS_DG_P_C_AK12:SEX AND AGE!!Total population!!75 to 84 years
+CS_DG_P_C_AK13:SEX AND AGE!!Total population!!85 years and over
+CS_HG_P_NC_AL:HOUSING TENURE!!Occupied housing units!!Renter-occupied
+CS_HG_P_NC_AM:SELECTED CHARACTERISTICS!!Occupied housing units!!Lacking complete plumbing facilities
+CS_HG_P_NC_AN:SELECTED CHARACTERISTICS!!Occupied housing units!!Lacking complete kitchen facilities
+CS_HG_P_NC_AO:SELECTED CHARACTERISTICS!!Occupied housing units!!No telephone service available
+CS_HG_P_C_AP1:OCCUPANTS PER ROOM!!Occupied housing units!!1.00 or less
+CS_HG_P_C_AP2:OCCUPANTS PER ROOM!!Occupied housing units!!1.01 to 1.50
+CS_HG_P_C_AP3:OCCUPANTS PER ROOM!!Occupied housing units!!1.51 or more
+CS_HG_P_C_AQ1:GROSS RENT AS A PERCENTAGE OF HOUSEHOLD INCOME (GRAPI)!!Occupied units paying rent (excluding units where GRAPI cannot be computed)!!Less than 15.0 percent
+CS_HG_P_C_AQ2:GROSS RENT AS A PERCENTAGE OF HOUSEHOLD INCOME (GRAPI)!!Occupied units paying rent (excluding units where GRAPI cannot be computed)!!15.0 to 19.9 percent
+CS_HG_P_C_AQ3:GROSS RENT AS A PERCENTAGE OF HOUSEHOLD INCOME (GRAPI)!!Occupied units paying rent (excluding units where GRAPI cannot be computed)!!20.0 to 24.9 percent
+CS_HG_P_C_AQ4:GROSS RENT AS A PERCENTAGE OF HOUSEHOLD INCOME (GRAPI)!!Occupied units paying rent (excluding units where GRAPI cannot be computed)!!25.0 to 29.9 percent
+CS_HG_P_C_AQ5:GROSS RENT AS A PERCENTAGE OF HOUSEHOLD INCOME (GRAPI)!!Occupied units paying rent (excluding units where GRAPI cannot be computed)!!30.0 to 34.9 percent
+CS_HG_P_C_AQ6:GROSS RENT AS A PERCENTAGE OF HOUSEHOLD INCOME (GRAPI)!!Occupied units paying rent (excluding units where GRAPI cannot be computed)!!35.0 percent or more
+CS_HG_P_C_AR1:SELECTED MONTHLY OWNER COSTS AS A PERCENTAGE OF HOUSEHOLD INCOME (SMOCAPI)!!Housing units with a mortgage (excluding units where SMOCAPI cannot be computed)!!Less than 20.0 percent
+CS_HG_P_C_AR2:SELECTED MONTHLY OWNER COSTS AS A PERCENTAGE OF HOUSEHOLD INCOME (SMOCAPI)!!Housing units with a mortgage (excluding units where SMOCAPI cannot be computed)!!20.0 to 24.9 percent
+CS_HG_P_C_AR3:SELECTED MONTHLY OWNER COSTS AS A PERCENTAGE OF HOUSEHOLD INCOME (SMOCAPI)!!Housing units with a mortgage (excluding units where SMOCAPI cannot be computed)!!25.0 to 29.9 percent
+CS_HG_P_C_AR4:SELECTED MONTHLY OWNER COSTS AS A PERCENTAGE OF HOUSEHOLD INCOME (SMOCAPI)!!Housing units with a mortgage (excluding units where SMOCAPI cannot be computed)!!30.0 to 34.9 percent
+CS_HG_P_C_AR5:SELECTED MONTHLY OWNER COSTS AS A PERCENTAGE OF HOUSEHOLD INCOME (SMOCAPI)!!Housing units with a mortgage (excluding units where SMOCAPI cannot be computed)!!35.0 percent or more
+CS_HG_P_C_AS1:SELECTED MONTHLY OWNER COSTS AS A PERCENTAGE OF HOUSEHOLD INCOME (SMOCAPI)!!Housing unit without a mortgage (excluding units where SMOCAPI cannot be computed)!!Less than 10.0 percent
+CS_HG_P_C_AS2:SELECTED MONTHLY OWNER COSTS AS A PERCENTAGE OF HOUSEHOLD INCOME (SMOCAPI)!!Housing unit without a mortgage (excluding units where SMOCAPI cannot be computed)!!10.0 to 14.9 percent
+CS_HG_P_C_AS3:SELECTED MONTHLY OWNER COSTS AS A PERCENTAGE OF HOUSEHOLD INCOME (SMOCAPI)!!Housing unit without a mortgage (excluding units where SMOCAPI cannot be computed)!!15.0 to 19.9 percent
+CS_HG_P_C_AS4:SELECTED MONTHLY OWNER COSTS AS A PERCENTAGE OF HOUSEHOLD INCOME (SMOCAPI)!!Housing unit without a mortgage (excluding units where SMOCAPI cannot be computed)!!20.0 to 24.9 percent
+CS_HG_P_C_AS5:SELECTED MONTHLY OWNER COSTS AS A PERCENTAGE OF HOUSEHOLD INCOME (SMOCAPI)!!Housing unit without a mortgage (excluding units where SMOCAPI cannot be computed)!!25.0 to 29.9 percent
+CS_HG_P_C_AS6:SELECTED MONTHLY OWNER COSTS AS A PERCENTAGE OF HOUSEHOLD INCOME (SMOCAPI)!!Housing unit without a mortgage (excluding units where SMOCAPI cannot be computed)!!30.0 to 34.9 percent
+CS_HG_P_C_AS7:SELECTED MONTHLY OWNER COSTS AS A PERCENTAGE OF HOUSEHOLD INCOME (SMOCAPI)!!Housing unit without a mortgage (excluding units where SMOCAPI cannot be computed)!!35.0 percent or more
+CS_SC_P_NC_AT:HOUSEHOLDS BY TYPE!!Total households!!Married-couple family!!With own children of the householder under 18 years:
+HOUSEHOLDS BY TYPE!!Total households!!Male householder, no wife present, family!!With own children of the householder under 18 years:CS_SC_P_NC_AU:
+HOUSEHOLDS BY TYPE!!Total households!!Female householder, no husband present, family!!With own children of the householder under 18 years:CS_SC_P_NC_AV:
+CS_SC_P_C_AX1:MARITAL STATUS!!Males 15 years and over!!Never married
+CS_SC_P_C_AX2:MARITAL STATUS!!Males 15 years and over!!Now married, except separated
+CS_SC_P_C_AX3:MARITAL STATUS!!Males 15 years and over!!Separated
+CS_SC_P_C_AX4:MARITAL STATUS!!Males 15 years and over!!Widowed
+CS_SC_P_C_AX5:MARITAL STATUS!!Males 15 years and over!!Divorced
+CS_SC_P_C_AY1:MARITAL STATUS!!Females 15 years and over!!Never married
+CS_SC_P_C_AY2:MARITAL STATUS!!Females 15 years and over!!Now married, except separated
+CS_SC_P_C_AY3:MARITAL STATUS!!Females 15 years and over!!Separated
+CS_SC_P_C_AY4:MARITAL STATUS!!Females 15 years and over!!Widowed
+CS_SC_P_C_AY5:MARITAL STATUS!!Females 15 years and over!!Divorced
+CS_SC_P_C_AZ1:EDUCATIONAL ATTAINMENT!!Population 25 years and over!!Less than 9th grade
+CS_SC_P_C_AZ2:EDUCATIONAL ATTAINMENT!!Population 25 years and over!!9th to 12th grade, no diploma
+CS_SC_P_C_AZ3:EDUCATIONAL ATTAINMENT!!Population 25 years and over!!High school graduate (includes equivalency)
+CS_SC_P_C_AZ4:EDUCATIONAL ATTAINMENT!!Population 25 years and over!!Some college, no degree
+CS_SC_P_C_AZ5:EDUCATIONAL ATTAINMENT!!Population 25 years and over!!Associate's degree
+CS_SC_P_C_AZ6:EDUCATIONAL ATTAINMENT!!Population 25 years and over!!Bachelor's degree
+CS_SC_P_C_AZ7:EDUCATIONAL ATTAINMENT!!Population 25 years and over!!Graduate or professional degree
+CS_SC_P_NC_BA:VETERAN STATUS!!Civilian population 18 years and over!!Civilian veterans:
+CS_SC_P_NC_BB:DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION!!Total Civilian Noninstitutionalized Population!!With a disability
+CS_SC_P_NC_BC:DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION!!Under 18 years!!With a disability
+CS_SC_P_NC_BD:RESIDENCE 1 YEAR AGO!!Population 1 year and over!!Same house
+CS_SC_P_NC_BE:PLACE OF BIRTH!!Total population!!Foreign born
+CS_SC_P_NC_BF:U.S. CITIZENSHIP STATUS!!Foreign-born population!!Not a U.S. citizen
+CS_SC_P_NC_BG:COMPUTERS AND INTERNET USE!!Total households!!With a computer
+CS_SC_P_NC_BH:COMPUTERS AND INTERNET USE!!Total households!!With a broadband Internet subscription
+CS_SC_P_C_BI1:ANCESTRY!!Total population!!American
+CS_SC_P_C_BI2:ANCESTRY!!Total population!!Arab
+CS_SC_P_C_BI3:ANCESTRY!!Total population!!Czech
+CS_SC_P_C_BI4:ANCESTRY!!Total population!!Danish
+CS_SC_P_C_BI5:ANCESTRY!!Total population!!Dutch
+CS_SC_P_C_BI6:ANCESTRY!!Total population!!English:
+CS_SC_P_C_BI7:ANCESTRY!!Total population!!French (except Basque)
+CS_SC_P_C_BI8:ANCESTRY!!Total population!!French Canadian
+CS_SC_P_C_BI9:ANCESTRY!!Total population!!German
+CS_SC_P_C_BI10:ANCESTRY!!Total population!!Greek
+CS_SC_P_C_BI11:ANCESTRY!!Total population!!Hungarian
+CS_SC_P_C_BI12:ANCESTRY!!Total population!!Irish
+CS_SC_P_C_BI13:ANCESTRY!!Total population!!Italian
+CS_SC_P_C_BI14:ANCESTRY!!Total population!!Lithuanian
+CS_SC_P_C_BI15ANCESTRY!!Total population!!Norwegian
+CS_SC_P_C_BI16:ANCESTRY!!Total population!!Polish
+CS_SC_P_C_BI7:ANCESTRY!!Total population!!Portuguese
+CS_SC_P_C_BI18:ANCESTRY!!Total population!!Russian
+CS_SC_P_C_BI19:ANCESTRY!!Total population!!Scotch-Irish
+CS_SC_P_C_BI20:ANCESTRY!!Total population!!Scottish
+CS_SC_P_C_BI21:ANCESTRY!!Total population!!Slovak
+CS_SC_P_C_BI22:ANCESTRY!!Total population!!Subsaharan African
+CS_SC_P_C_BI23:ANCESTRY!!Total population!!Swedish
+CS_SC_P_C_BI24:ANCESTRY!!Total population!!Swiss
+CS_SC_P_C_BI25:ANCESTRY!!Total population!!Ukrainian
+CS_SC_P_C_BI26:ANCESTRY!!Total population!!Welsh
+CS_SC_P_C_BI27:ANCESTRY!!Total population!!West Indian (excluding Hispanic origin groups)
+CS_SC_P_NC_BJ:"LANGUAGE SPOKEN AT HOME!!Population 5 years and over!!Language other than English!!Speak English less than ""very well"""
+CS_SC_P_NC_BK:LANGUAGE SPOKEN AT HOME!!Population 5 years and over!!English only
+CS_SC_P_C_BL1:WORLD REGION OF BIRTH OF FOREIGN BORN!!Foreign-born population, excluding population born at sea!!Europe
+CS_SC_P_C_BL2:WORLD REGION OF BIRTH OF FOREIGN BORN!!Foreign-born population, excluding population born at sea!!Asia
+CS_SC_P_C_BL3:WORLD REGION OF BIRTH OF FOREIGN BORN!!Foreign-born population, excluding population born at sea!!Africa
+CS_SC_P_C_BL4:WORLD REGION OF BIRTH OF FOREIGN BORN!!Foreign-born population, excluding population born at sea!!Oceania
+CS_SC_P_C_BL5:WORLD REGION OF BIRTH OF FOREIGN BORN!!Foreign-born population, excluding population born at sea!!Latin America
+CS_SC_P_C_BL6:WORLD REGION OF BIRTH OF FOREIGN BORN!!Foreign-born population, excluding population born at sea!!Northern America
+CS_SC_P_NC_BM:YEAR OF ENTRY!!Population born outside the United States!!Native!!Entered 2010 or later
+CS_SC_P_NC_BN:YEAR OF ENTRY!!Population born outside the United States!!Foreign born!!Entered 2010 or later
+SC_CAT_NC_BO:School Code
+SC_CAT_NC_BP:School Type
+SC_CAT_NC_BQ:Town
+SC_CAT_NC_BR:Grade
+SC_CAT_NC_BS:District Code
+SC_CAT_NC_BT:Accountability and Assistance Level
+SC_CAT_NC_BU:District_Accountability and Assistance Level
+SC_V_NC_BV:PK_Enrollment
+SC_V_NC_BX:1_Enrollment
+SC_V_NC_BY:2_Enrollment
+SC_V_NC_BZ:3_Enrollment
+SC_V_NC_CA:4_Enrollment
+SC_V_NC_CB:5_Enrollment
+SC_V_NC_CC:6_Enrollment
+SC_V_NC_CD:7_Enrollment
+SC_V_NC_CE:8_Enrollment
+SC_V_NC_CF:9_Enrollment
+SC_V_NC_CG:10_Enrollment
+SC_V_NC_CH:11_Enrollment
+SC_V_NC_CI:12_Enrollment
+SC_V_NC_CJ:SP_Enrollment
+SC_V_NC_CK:TOTAL_Enrollment
+SC_P_NC_CL:% First Language Not English
+SC_P_NC_CM:% English Language Learner
+SC_P_NC_CN:% Students with Disabilities
+SC_P_NC_CO:% High Needs
+SC_P_NC_CP:% Economically Disadvantaged
+SC_P_C_CQ1:% African American
+SC_P_C_CQ2:% Asian
+SC_P_C_CQ3:% Hispanic
+SC_P_C_CQ4:% White
+SC_P_C_CQ5:% Native American
+SC_P_C_CQ6:% Native Hawaiian, Pacific Islander
+SC_P_C_CQ7:% Multi-Race, Non-Hispanic
+SC_P_NC_CQ2:% Males
+SC_V_NC_CR:Average Class Size
+SC_V_NC_CS:Average Salary
+SC_V_NC_CT:Average In-District Expenditures per Pupil
+SC_V_NC_CU:Average Expenditures per Pupil
+

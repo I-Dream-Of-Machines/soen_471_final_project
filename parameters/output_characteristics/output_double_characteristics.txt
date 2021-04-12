@@ -1,0 +1,12 @@
+SchoolCode
+%Graduated
+%AttendingCollege
+%AP_Score3-5
+MCAS_3rdGrade_Math_CPI
+MCAS_5thGrade_Math_CPI
+MCAS_8thGrade_Math_CPI
+MCAS_10thGrade_Math_CPI
+MCAS_3rdGrade_English_CPI
+MCAS_5thGrade_English_CPI
+MCAS_8thGrade_English_CPI
+MCAS_10thGrade_English_CPI

@@ -1,0 +1,6 @@
+SchoolCode
+SchoolType
+Grade
+DistrictCode
+AccountabilityandAssistanceLevel
+District_AccountabilityandAssistanceLevel

@@ -1,0 +1,389 @@
+     Town                    Count of Schools
+---  --------------------  ------------------
+  0  Nahant                                 1
+  1  Waban                                  1
+  2  Savoy                                  1
+  3  Indian Orchard                         1
+  4  Granville                              1
+  5  Brookfield                             1
+  6  Conway                                 1
+  7  Otis                                   1
+  8  Marion                                 1
+  9  Royalston                              1
+ 10  East Freetown                          1
+ 11  Whately                                1
+ 12  Sunderland                             1
+ 13  Chesterfield                           1
+ 14  Bradford                               1
+ 15  North Billerica                        1
+ 16  Becket                                 1
+ 17  Petersham                              1
+ 18  Colrain                                1
+ 19  Provincetown                           1
+ 20  Phillipston                            1
+ 21  Truro                                  1
+ 22  Marstons Mills                         1
+ 23  Berlin                                 1
+ 24  Wales                                  1
+ 25  Princeton                              1
+ 26  West Warren                            1
+ 27  Clarksburg                             1
+ 28  East Harwich                           1
+ 29  West Brookfield                        1
+ 30  Rowe                                   1
+ 31  Cuttyhunk                              1
+ 32  Back Bay                               1
+ 33  Erving                                 1
+ 34  Marston Mills                          1
+ 35  Bernardston                            1
+ 36  Williamsburg                           1
+ 37  Centerville                            1
+ 38  North Grafton                          1
+ 39  Hancock                                1
+ 40  North Falmouth                         1
+ 41  Russell                                1
+ 42  Newbury                                1
+ 43  South Dennis                           1
+ 44  Brimfield                              1
+ 45  Hubbardston                            1
+ 46  Boxborough                             1
+ 47  East Weymouth                          1
+ 48  Lincoln                                1
+ 49  Pelham                                 1
+ 50  Carlisle                               1
+ 51  Leverett                               1
+ 52  Eastham                                1
+ 53  Rowley                                 1
+ 54  Plympton                               1
+ 55  East Brookfield                        1
+ 56  Hinsdale                               1
+ 57  Worthington                            1
+ 58  Ashfield                               1
+ 59  New Braintree                          1
+ 60  North Dighton                          1
+ 61  Newton Corner                          1
+ 62  Leyden                                 1
+ 63  Southampton                            1
+ 64  West Barnstable                        1
+ 65  Groveland                              1
+ 66  Wellfleet                              1
+ 67  South Dartmouth                        1
+ 68  Gilbertville                           1
+ 69  Sherborn                               1
+ 70  North Eastham                          1
+ 71  Ashby                                  1
+ 72  Salisbury                              1
+ 73  Hamilton                               1
+ 74  Vineyard Haven                         1
+ 75  Lanesborough                           1
+ 76  New Salem                              1
+ 77  Shutesbury                             1
+ 78  South Grafton                          1
+ 79  North Weymouth                         1
+ 80  Chester                                1
+ 81  Florida                                1
+ 82  Chilmark                               1
+ 83  Millville                              1
+ 84  Wenham                                 1
+ 85  Dunstable                              1
+ 86  Warwick                                1
+ 87  Hathorne                               1
+ 88  Paxton                                 1
+ 89  Richmond                               1
+ 90  Leeds                                  1
+ 91  Tyngsboro                              1
+ 92  Jefferson                              1
+ 93  Halifax                                1
+ 94  Essex                                  1
+ 95  Middleboro                             1
+ 96  Oakham                                 1
+ 97  West Dennis                            1
+ 98  Bournedale                             1
+ 99  Edgartown                              1
+100  Holland                                1
+101  Newton Highlands                       1
+102  Gill                                   1
+103  Devens                                 1
+104  West Yarmouth                          2
+105  Sterling                               2
+106  Bolton                                 2
+107  Brewster                               2
+108  Boylston                               2
+109  Carver                                 2
+110  Berkley                                2
+111  East Sandwich                          2
+112  Florence                               2
+113  North Brookfield                       2
+114  Plainville                             2
+115  Sandwich                               2
+116  Ayer                                   2
+117  Stow                                   2
+118  Warren                                 2
+119  Oak Bluffs                             2
+120  Topsfield                              2
+121  Northfield                             2
+122  Lancaster                              2
+123  Hatfield                               2
+124  Adams                                  2
+125  Westminster                            2
+126  Hanscom Air Force Bs                   2
+127  South Yarmouth                         2
+128  Rochester                              2
+129  South Weymouth                         2
+130  Merrimac                               2
+131  South Deerfield                        2
+132  Auburndale                             2
+133  Charlemont                             2
+134  Montague                               2
+135  Rehoboth                               2
+136  South Easton                           2
+137  Westhampton                            2
+138  Williamstown                           2
+139  Shelburne Falls                        2
+140  North Chelmsford                       2
+141  Mendon                                 2
+142  West Newton                            2
+143  Cheshire                               2
+144  Shirley                                2
+145  Harvard                                2
+146  Orleans                                2
+147  Feeding Hills                          2
+148  Avon                                   2
+149  Chatham                                2
+150  Lenox                                  2
+151  West Tisbury                           2
+152  Byfield                                2
+153  West Boylston                          2
+154  North Dartmouth                        2
+155  Lee                                    2
+156  Hampden                                2
+157  Acushnet                               2
+158  East Taunton                           2
+159  Middleton                              2
+160  Sturbridge                             2
+161  East Falmouth                          2
+162  Chestnut Hill                          3
+163  Wrentham                               3
+164  Manchester                             3
+165  Holbrook                               3
+166  Rutland                                3
+167  Hull                                   3
+168  Spencer                                3
+169  Orange                                 3
+170  Turners Falls                          3
+171  Upton                                  3
+172  Harwich                                3
+173  West Newbury                           3
+174  Millbury                               3
+175  East Bridgewater                       3
+176  Webster                                3
+177  Pepperell                              3
+178  Allston                                3
+179  Newton                                 3
+180  Ashburnham                             3
+181  Rockport                               3
+182  Nantucket                              3
+183  Raynham                                3
+184  Dalton                                 3
+185  Ware                                   3
+186  Dighton                                3
+187  Westport                               3
+188  Hopedale                               3
+189  South Hamilton                         3
+190  Clinton                                3
+191  Southwick                              3
+192  Cohasset                               3
+193  Norfolk                                3
+194  Hanson                                 3
+195  Maynard                                3
+196  Dover                                  3
+197  Fiskdale                               3
+198  Granby                                 3
+199  East Walpole                           3
+200  Great Barrington                       3
+201  Huntington                             3
+202  Millis                                 3
+203  Monson                                 3
+204  Hadley                                 3
+205  Dartmouth                              3
+206  Athol                                  3
+207  Georgetown                             4
+208  Boxford                                4
+209  Tyngsborough                           4
+210  Holliston                              4
+211  Dudley                                 4
+212  Middleborough                          4
+213  Leicester                              4
+214  Blackstone                             4
+215  Charlestown                            4
+216  Kingston                               4
+217  Seekonk                                4
+218  Mattapoisett                           4
+219  Grafton                                4
+220  Groton                                 4
+221  Bourne                                 4
+222  Lunenburg                              4
+223  Barre                                  4
+224  Bedford                                4
+225  Duxbury                                4
+226  Medway                                 4
+227  Winthrop                               4
+228  Whitman                                4
+229  Mashpee                                4
+230  Palmer                                 4
+231  Littleton                              4
+232  Baldwinville                           4
+233  Sutton                                 4
+234  Townsend                               4
+235  Lakeville                              4
+236  Ipswich                                4
+237  Southborough                           4
+238  Northampton                            4
+239  Falmouth                               4
+240  Fairhaven                              4
+241  Whitinsville                           4
+242  Douglas                                4
+243  Charlton                               4
+244  West Bridgewater                       4
+245  Auburn                                 5
+246  Belchertown                            5
+247  Abington                               5
+248  Ludlow                                 5
+249  Oxford                                 5
+250  Medfield                               5
+251  Norwell                                5
+252  North Reading                          5
+253  Norton                                 5
+254  Newtonville                            5
+255  Uxbridge                               5
+256  Bridgewater                            5
+257  Ashland                                5
+258  Rockland                               5
+259  Hudson                                 5
+260  Weston                                 5
+261  Mansfield                              5
+262  Southbridge                            5
+263  Stoneham                               5
+264  North Adams                            5
+265  Pembroke                               5
+266  Wayland                                5
+267  Wareham                                5
+268  Amherst                                5
+269  Sheffield                              5
+270  Lynnfield                              5
+271  Somerset                               5
+272  Wilbraham                              5
+273  Swampscott                             5
+274  South Hadley                           5
+275  Amesbury                               5
+276  Methuen                                5
+277  Holden                                 5
+278  Watertown                              5
+279  North Easton                           5
+280  Concord                                5
+281  East Longmeadow                        5
+282  Newburyport                            5
+283  Sharon                                 5
+284  Agawam                                 6
+285  Hanover                                6
+286  Winchendon                             6
+287  Longmeadow                             6
+288  Dracut                                 6
+289  Hopkinton                              6
+290  Bellingham                             6
+291  Easthampton                            6
+292  Northborough                           6
+293  Burlington                             6
+294  Milton                                 6
+295  Foxborough                             6
+296  Chelmsford                             6
+297  Randolph                               6
+298  Belmont                                6
+299  Milford                                6
+300  Swansea                                6
+301  South Boston                           6
+302  Hingham                                6
+303  West Roxbury                           6
+304  Scituate                               6
+305  Sudbury                                6
+306  Hyannis                                6
+307  Brighton                               7
+308  Walpole                                7
+309  Dedham                                 7
+310  Danvers                                7
+311  Tewksbury                              7
+312  Winchester                             7
+313  Mattapan                               7
+314  Marshfield                             7
+315  Newton Centre                          7
+316  North Andover                          7
+317  Gardner                                7
+318  North Attleborough                     8
+319  Beverly                                8
+320  Wakefield                              8
+321  Norwood                                8
+322  Marblehead                             8
+323  Weymouth                               8
+324  Acton                                  8
+325  Wilmington                             8
+326  Saugus                                 8
+327  Natick                                 8
+328  Melrose                                8
+329  Gloucester                             8
+330  Stoughton                              8
+331  Needham                                8
+332  Canton                                 8
+333  Westwood                               8
+334  Malden                                 8
+335  Marlborough                            8
+336  Medford                                9
+337  Roslindale                             9
+338  Wellesley                              9
+339  Hyde Park                              9
+340  Reading                                9
+341  Greenfield                             9
+342  Billerica                              9
+343  Shrewsbury                             9
+344  Brookline                              9
+345  Jamaica Plain                          9
+346  Fitchburg                             10
+347  Waltham                               10
+348  Everett                               10
+349  Westborough                           10
+350  West Springfield                      10
+351  Arlington                             10
+352  Braintree                             10
+353  Chelsea                               10
+354  Peabody                               10
+355  Andover                               11
+356  Attleboro                             11
+357  Westfield                             11
+358  Lexington                             11
+359  Woburn                                11
+360  Westford                              11
+361  Somerville                            11
+362  Revere                                11
+363  Taunton                               12
+364  Pittsfield                            12
+365  Leominster                            12
+366  East Boston                           12
+367  Franklin                              13
+368  Salem                                 13
+369  Holyoke                               14
+370  Plymouth                              15
+371  Framingham                            16
+372  Chicopee                              17
+373  Boston                                17
+374  Haverhill                             18
+375  Roxbury                               19
+376  Quincy                                19
+377  Cambridge                             20
+378  Fall River                            21
+379  Brockton                              25
+380  Lynn                                  27
+381  Lowell                                28
+382  New Bedford                           29
+383  Lawrence                              30
+384  Dorchester                            32
+385  Worcester                             48
+386  Springfield                           63

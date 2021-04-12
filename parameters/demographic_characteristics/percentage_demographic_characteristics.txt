@@ -1,0 +1,20 @@
+Label
+RACE!!Total population!!One race!!White
+RACE!!Total population!!One race!!Black or African American
+RACE!!Total population!!One race!!American Indian and Alaska Native
+RACE!!Total population!!One race!!Asian
+RACE!!Total population!!One race!!Native Hawaiian and Other Pacific Islander
+RACE!!Total population!!Two or more races60
+SEX AND AGE!!Total population!!Under 5 years
+SEX AND AGE!!Total population!!5 to 9 years
+SEX AND AGE!!Total population!!10 to 14 years
+SEX AND AGE!!Total population!!15 to 19 years
+SEX AND AGE!!Total population!!20 to 24 years
+SEX AND AGE!!Total population!!25 to 34 years
+SEX AND AGE!!Total population!!35 to 44 years
+SEX AND AGE!!Total population!!45 to 54 years
+SEX AND AGE!!Total population!!55 to 59 years
+SEX AND AGE!!Total population!!60 to 64 years
+SEX AND AGE!!Total population!!65 to 74 years
+SEX AND AGE!!Total population!!75 to 84 years
+SEX AND AGE!!Total population!!85 years and over

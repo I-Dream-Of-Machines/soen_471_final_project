@@ -1,0 +1,4 @@
+Label
+SEX AND AGE!!Total population
+SEX AND AGE!!Total population!!Sex ratio (males per 100 females)
+SEX AND AGE!!Total population!!Median age (years)
