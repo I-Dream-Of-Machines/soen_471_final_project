@@ -1,4 +1,0 @@
-SchoolCode
-AverageSAT_Reading
-AverageSAT_Writing
-AverageSAT_Math

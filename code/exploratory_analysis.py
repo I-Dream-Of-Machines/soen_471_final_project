@@ -4,56 +4,55 @@ from pyspark.rdd import RDD
 from pyspark.sql import DataFrame
 from pyspark.sql import SparkSession
 from tabulate import tabulate
+import utilities
 
 
-def init_spark():
-    spark = SparkSession \
-        .builder \
-        .appName("Soen 471 Final Project") \
-        .config("spark.some.config.option", "some-value") \
-        .getOrCreate()
-    return spark
-
-
-def generate_histograms_for_output_variable(output_df):
-    with open("../data/output_cleaned.txt") as f:
+def generate_histograms_for_output_variable():
+    spark = utilities.init_spark()
+    output_df = spark.read.parquet(utilities.preprocessed_output_variables_file_path_pq)
+    column_maps = utilities.init_column_maps()
+    with open(utilities.output_variables_file_path) as f:
         output_variables = f.readlines()
-        output_variables.remove("SchoolCode\n")
+        output_variables.remove("School_Code\n")
         output_variables.remove("Town\n")
         for output_variable in output_variables:
             output_variable = output_variable.replace("\n", "")
+            readable_output_variable = list(filter(lambda col_map: col_map[0] == output_variable, column_maps))[0][2]
+            title = readable_output_variable + " vs Number of Schools"
             output_np = output_df.select(output_variable).dropna().toPandas()
             n = output_np.count()
             nos_of_intervals = math.ceil(math.sqrt(n))
             plt.hist(output_np, bins=nos_of_intervals)
-            plt.xlabel(output_variable)
+            plt.xlabel(readable_output_variable)
             plt.ylabel("Number of Schools")
-            title = output_variable + " vs Number of Schools"
             plt.title(title)
-            plt.savefig(f"../figures/{output_variable}_vs_Number_of_Schools.png")
+            plt.savefig(f"../figures/exploratory_analysis/output_variables/{output_variable}_vs_Number_of_Schools.png")
             plt.clf()
     return None
 
 
-def generate_histograms_for_output_variable_avg_by_town(output_df):
-    with open("../data/output_cleaned.txt") as f:
+def generate_histograms_for_output_variable_avg_by_town():
+    spark = utilities.init_spark()
+    output_df = spark.read.parquet(utilities.preprocessed_output_variables_file_path_pq)
+    column_maps = utilities.init_column_maps()
+    with open(utilities.output_variables_file_path) as f:
         output_variables = f.readlines()
-        output_variables.remove("SchoolCode\n")
+        output_variables.remove("School_Code\n")
         output_variables.remove("Town\n")
         for output_variable in output_variables:
             output_variable = output_variable.replace("\n", "")
-            output_variable_df = output_df.select("SchoolCode", "Town", output_variable).dropna()
+            output_variable_df = output_df.select("School_Code", "Town", output_variable).dropna()
             output_variable_pd = output_variable_df.groupBy("Town").agg({output_variable: "mean"}).drop("Town")\
                 .toPandas()
             n = output_variable_pd.count()
             nos_of_intervals = math.ceil(math.sqrt(n))
             plt.hist(output_variable_pd, bins=nos_of_intervals)
-            output_variable_string = output_variable + "(avg)"
-            plt.xlabel(output_variable_string)
+            readable_output_variable = list(filter(lambda col_map: col_map[0] == output_variable, column_maps))[0][2]
+            title = "Average " + readable_output_variable + " vs Number of Towns"
+            plt.xlabel(readable_output_variable)
             plt.ylabel("Number of Towns")
-            title = output_variable_string + " vs Number of Towns"
             plt.title(title)
-            plt.savefig(f"../figures/{output_variable_string}_vs_Number_of_Towns.png")
+            plt.savefig(f"../figures/exploratory_analysis/output_variables/{output_variable}_vs_Number_of_Towns.png")
             plt.clf()
 
 
@@ -89,14 +88,7 @@ def generate_box_plots_for_school_input_parameters(parameter_df):
 
 
 def generate_schools_per_town():
-    spark = init_spark()
+    spark = utilities.init_spark()
     school_df = spark.read.parquet("../data/school_characteristics.parquet")
     with open("../figures/Count_Of_School_Town.txt", "x") as f:
         f.write(tabulate(school_df.groupBy("Town").count().orderBy("count").toPandas(), headers=["Town", "Count of Schools"]))
-
-
-
-
-"""Taken from Sharareh's code in Exploratory Analysis Jupyter Notebook"""
-
-# def generate_correlation_scores(census_df):

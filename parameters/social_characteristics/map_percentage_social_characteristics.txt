@@ -1,4 +1,3 @@
-Label
 CS_SC_P_NC_AT:HOUSEHOLDS BY TYPE!!Total households!!Married-couple family!!With own children of the householder under 18 years:
 HOUSEHOLDS BY TYPE!!Total households!!Male householder, no wife present, family!!With own children of the householder under 18 years:CS_SC_P_NC_AU:
 HOUSEHOLDS BY TYPE!!Total households!!Female householder, no husband present, family!!With own children of the householder under 18 years:CS_SC_P_NC_AV:
@@ -54,6 +53,7 @@ CS_SC_P_C_BI24:ANCESTRY!!Total population!!Swiss
 CS_SC_P_C_BI25:ANCESTRY!!Total population!!Ukrainian
 CS_SC_P_C_BI26:ANCESTRY!!Total population!!Welsh
 CS_SC_P_C_BI27:ANCESTRY!!Total population!!West Indian (excluding Hispanic origin groups)
+CS_SC_P_C_BI28:ANCESTRY!!Total population!!Norwegian
 CS_SC_P_NC_BJ:"LANGUAGE SPOKEN AT HOME!!Population 5 years and over!!Language other than English!!Speak English less than ""very well"""
 CS_SC_P_NC_BK:LANGUAGE SPOKEN AT HOME!!Population 5 years and over!!English only
 CS_SC_P_C_BL1:WORLD REGION OF BIRTH OF FOREIGN BORN!!Foreign-born population, excluding population born at sea!!Europe

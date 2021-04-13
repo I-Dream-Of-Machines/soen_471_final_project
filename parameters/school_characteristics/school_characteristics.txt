@@ -1,39 +1,39 @@
-SC_CAT_NC_BO:School Code
-SC_CAT_NC_BP:School Type
-SC_CAT_NC_BQ:Town
-SC_CAT_NC_BR:Grade
-SC_CAT_NC_BS:District Code
-SC_CAT_NC_BT:Accountability and Assistance Level
-SC_CAT_NC_BU:District_Accountability and Assistance Level
-SC_V_NC_BV:PK_Enrollment
-SC_V_NC_BX:1_Enrollment
-SC_V_NC_BY:2_Enrollment
-SC_V_NC_BZ:3_Enrollment
-SC_V_NC_CA:4_Enrollment
-SC_V_NC_CB:5_Enrollment
-SC_V_NC_CC:6_Enrollment
-SC_V_NC_CD:7_Enrollment
-SC_V_NC_CE:8_Enrollment
-SC_V_NC_CF:9_Enrollment
-SC_V_NC_CG:10_Enrollment
-SC_V_NC_CH:11_Enrollment
-SC_V_NC_CI:12_Enrollment
-SC_V_NC_CJ:SP_Enrollment
-SC_V_NC_CK:TOTAL_Enrollment
-SC_P_NC_CL:% First Language Not English
-SC_P_NC_CM:% English Language Learner
-SC_P_NC_CN:% Students with Disabilities
-SC_P_NC_CO:% High Needs
-SC_P_NC_CP:% Economically Disadvantaged
-SC_P_C_CQ1:% African American
-SC_P_C_CQ2:% Asian
-SC_P_C_CQ3:% Hispanic
-SC_P_C_CQ4:% White
-SC_P_C_CQ5:% Native American
-SC_P_C_CQ6:% Native Hawaiian, Pacific Islander
-SC_P_C_CQ7:% Multi-Race, Non-Hispanic
-SC_P_NC_CQ2:% Males
-SC_V_NC_CR:Average Class Size
-SC_V_NC_CS:Average Salary
-SC_V_NC_CT:Average In-District Expenditures per Pupil
-SC_V_NC_CU:Average Expenditures per Pupil
+School_Code
+SC_CAT_NC_BP
+Town
+SC_CAT_NC_BR
+SC_CAT_NC_BS
+SC_CAT_NC_BT
+SC_CAT_NC_BU
+SC_V_NC_BV
+SC_V_NC_BX
+SC_V_NC_BY
+SC_V_NC_BZ
+SC_V_NC_CA
+SC_V_NC_CB
+SC_V_NC_CC
+SC_V_NC_CD
+SC_V_NC_CE
+SC_V_NC_CF
+SC_V_NC_CG
+SC_V_NC_CH
+SC_V_NC_CI
+SC_V_NC_CJ
+SC_V_NC_CK
+SC_P_NC_CL
+SC_P_NC_CM
+SC_P_NC_CN
+SC_P_NC_CO
+SC_P_NC_CP
+SC_P_C_CQ1
+SC_P_C_CQ2
+SC_P_C_CQ3
+SC_P_C_CQ4
+SC_P_C_CQ5
+SC_P_C_CQ6
+SC_P_C_CQ7
+SC_P_NC_CR
+SC_V_NC_CS
+SC_V_NC_CT
+SC_V_NC_CU
+SC_V_NC_CV
