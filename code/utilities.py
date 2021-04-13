@@ -47,6 +47,7 @@ raw_school_data_file_path = "../data/raw_data/MA_Public_Schools_2017.csv"
 school_characteristics_file_path = "../parameters/school_characteristics/school_characteristics.txt"
 double_school_characteristics_file_path = "../parameters/school_characteristics/school_double_characteristics.txt"
 integer_school_characteristics_file_path = "../parameters/school_characteristics/school_integer_characteristics.txt"
+categorical_school_characteristics_file_path = "../parameters/school_characteristics/school_categorical_characteristics.txt"
 preprocessed_school_characteristics_file_path_pq = "../data/preprocessed_data/school_characteristics" \
                                                 "/school_characteristics.parquet"
 preprocessed_school_characteristics_file_path_csv = "../data/preprocessed_data/school_characteristics" \
@@ -65,6 +66,8 @@ preprocessed_output_variables_file_path_pq = "../data/preprocessed_data/output_v
 preprocessed_output_variables_file_path_csv = "../data/preprocessed_data/output_variables/output_variables.csv"
 
 stratification_bins_file_path = "../parameters/stratification_bins.txt"
+column_map_file_path = "../parameters/column_map.txt"
+categorical_column_map_file_path = "../parameters/categorical_column_map.txt"
 
 
 def init_spark():
@@ -72,13 +75,14 @@ def init_spark():
         .builder \
         .appName("Soen 471 Final Project") \
         .config("spark.submit.pyFiles", "/home/nadia/Documents/WINTER2021/S471/FinalProject/code/") \
+        .config("spark.driver.memory", "2g")\
         .getOrCreate()
     return spark
 
 
 def init_column_maps():
     column_maps = []
-    with open("../parameters/column_map.txt") as f:
+    with open(column_map_file_path) as f:
         parameters = f.readlines()
         for p in parameters:
             p = p.replace("\n", "")
