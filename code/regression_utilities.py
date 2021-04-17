@@ -5,21 +5,24 @@ import csv
 
 """
 Code Contribution (Shahrareh) - take from her Jupyter Notebook while combining code
+Modified by Nadia  to save generated train_test_split
 """
 
 
 def train_test_split(ov):
-    training = pd.read_csv('../data/test_training_data/' + ov + '/final_training_data.csv', sep=':')
+    training = pd.read_csv(f"../data/test_training_data/{ov}/final_training_data.csv", sep=':')
+    test = pd.read_csv(f"../data/test_training_data/{ov}/final_test_data.csv", sep=':')
     y_train = training.filter(regex=ov)
     x_train = training.drop(y_train, axis=1)
-    test = pd.read_csv('../data/test_training_data/' + ov + '/final_test_data.csv', sep=':')
     y_test = test.filter(regex=ov)
     x_test = test.drop(y_test, axis=1)
-    return x_train, x_test, y_train, y_test
-
+    y_train.write_csv(f"../data/test_training_data/{ov}/y_train.csv", sep=":", index=False)
+    x_train.write_csv(f"../data/test_training_data/{ov}/x_train.csv", sep=":", index=False)
+    x_test.write_csv(f"../data/test_training_data/{ov}/x_train.csv", sep=":", index=False)
+    y_test.write_csv(f"../data/test_training_data/{ov}/y_train.csv", sep=":", index=False)
 
 """
-Code Contribution (Shahrareh) - take from her Jupyter Notebook while combining code
+Code Contribution (Shahrareh) - take from her Jupyter Notebook while combining code 
 """
 
 
@@ -37,5 +40,7 @@ def print_save_metrics(y_test, y_pred, ov, metric_file_path):
     print('Mean Absolute Error (MAE):' + ov, mae)
     print('Mean Squared Error (MSE):' + ov, mse)
     print('Root Mean Squared Error (RMSE):' + ov, rmse)
+
+
 
 
