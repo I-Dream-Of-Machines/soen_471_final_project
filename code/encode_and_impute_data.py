@@ -54,6 +54,7 @@ def impute_df(df):
         imp_df = imp_df.drop(col_name)
     return imp_df
 
+
 def split_categorical_and_numerical_data(ov, split):
     spark = utilities.init_spark()
     ov_df = spark.read.parquet(f"../data/test_training_data/{ov}/preprocessed_{split}_data.parquet")
@@ -69,13 +70,13 @@ def split_categorical_and_numerical_data(ov, split):
         ov_cat_df = ov_df.select(select_param)
     return ov_num_df, ov_cat_df
 
-def encode_and_inmpute_data():
+
+def encode_and_impute_data():
     spark = utilities.init_spark()
     with open(utilities.output_variables_file_path) as fi:
-        output_variables = ["OP14\n"]
-            #fi.readlines()
-        #output_variables.remove("School_Code\n")
-        #output_variables.remove("Town\n")
+        output_variables = fi.readlines()
+        output_variables.remove("School_Code\n")
+        output_variables.remove("Town\n")
         for ov in output_variables:
             ov = ov.replace("\n", "")
             train_num_df, train_cat_df = split_categorical_and_numerical_data(ov, "training")

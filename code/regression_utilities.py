@@ -1,37 +1,24 @@
 import pandas as pd
 import numpy as np
+import utilities
 from sklearn import metrics
 import csv
-
-"""
-Code Contribution (Shahrareh) - take from her Jupyter Notebook while combining code
-Modified by Nadia  to save generated train_test_split
-"""
-
-
-def train_test_split(ov):
-    training = pd.read_csv(f"../data/test_training_data/{ov}/final_training_data.csv", sep=':')
-    test = pd.read_csv(f"../data/test_training_data/{ov}/final_test_data.csv", sep=':')
-    y_train = training.filter(regex=ov)
-    x_train = training.drop(y_train, axis=1)
-    y_test = test.filter(regex=ov)
-    x_test = test.drop(y_test, axis=1)
-    y_train.write_csv(f"../data/test_training_data/{ov}/y_train.csv", sep=":", index=False)
-    x_train.write_csv(f"../data/test_training_data/{ov}/x_train.csv", sep=":", index=False)
-    x_test.write_csv(f"../data/test_training_data/{ov}/x_train.csv", sep=":", index=False)
-    y_test.write_csv(f"../data/test_training_data/{ov}/y_train.csv", sep=":", index=False)
+import pickle as pk
+import os
 
 """
 Code Contribution (Shahrareh) - take from her Jupyter Notebook while combining code 
+Modified by Nadia 
 """
 
 
-def print_save_metrics(y_test, y_pred, ov, metric_file_path):
+def print_save_metrics(y_pred, technique, ov):
+    y_test = pd.read_csv(f"../data/test_training_data/{ov}/y_test.csv", sep=":")
     r2_score = metrics.r2_score(y_test, y_pred)
     mae = metrics.mean_absolute_error(y_test, y_pred)
     mse = metrics.mean_squared_error(y_test, y_pred)
     rmse = np.sqrt(metrics.mean_squared_error(y_test, y_pred))
-    with open(metric_file_path + ov + '.csv', 'w', newline='') as file:
+    with open(f"../results/{technique}/{ov}.csv", 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(
             ["r2_score", "Mean Absolute Error (MAE)", 'Mean Squared Error (MSE)', 'Root Mean Squared Error (RMSE)'])
@@ -42,42 +29,45 @@ def print_save_metrics(y_test, y_pred, ov, metric_file_path):
     print('Root Mean Squared Error (RMSE):' + ov, rmse)
 
 
-def feature_importance(important_list):
-    lst_column_map = init_column_maps()
-    lst_final = []
-    # important_list=sorted(list(zip(regressor.feature_importances_,X_test.columns)),key =lambda x: x[0] ,reverse=True)[:10]
-    for import_item in important_list:
-        import_item_rem = import_item[1].replace('_imputed', '')
-        for column_item in lst_column_map:
-            if import_item_rem == column_item[0]:
-                import_renamed = column_item[2]
-                l = list(import_item)
-                l[1] = import_renamed
-                lst_final.append(tuple(l))
-                break
-    return lst_final
+"""
+Based on Shahreh's function random_forest()
+Refactored by Nadia to ensure usability for both Random Forests and Decision Trees
+"""
 
 
+def regress(regressor, technique, ov):
+    x_train = pd.read_csv(f"../data/test_training_data/{ov}/x_train.csv", sep=":")
+    y_train = pd.read_csv(f"../data/test_training_data/{ov}/y_train.csv", sep=":")
+    x_test = pd.read_csv(f"../data/test_training_data/{ov}/x_test.csv", sep=":")
+    regressor.fit(x_train, y_train)
+    y_pred = regressor.predict(x_test)
+    with open(f'../models/{technique}/{ov}.pkl', 'wb') as model_file:
+        pk.dump(regressor, model_file)
+    with open(f'../results/{technique}/{ov}.pkl', 'wb') as prediction_file:
+        pk.dump(y_pred, prediction_file)
+    return regressor, y_pred
 
-def random_forest():
-    output_variable = ['School_Code', 'OP1', 'OP2', 'OP6', 'OP3', 'OP4', 'OP5', 'OP7', 'OP8', 'OP9', 'OP10', 'OP11',
-                       'OP12', 'OP13', 'OP14']
-    output_variable.remove('School_Code')
-    for item in output_variable:
-        X_train, X_test, y_train, y_test = train_test_split(item)
-        regressor = RandomForestRegressor()
-        regressor.fit(X_train, y_train)
-        y_pred = regressor.predict(X_test)
-        with open('../data/random_forest/' + item + '.pkl', 'wb') as pickle_file:
-            pk.dump(y_pred, pickle_file)
 
-        important_list = sorted(list(zip(regressor.feature_importances_, X_test.columns)), key=lambda x: x[0],
+"""
+Code Contribution (Shahrareh) - take from her Jupyter Notebook while combining code 
+Modified to save feature importance
+"""
+
+
+def feature_importance(regressor_feature_importance, technique, ov):
+    x_test_columns = pd.read_csv(f"../data/test_training_data/{ov}/x_train.csv", ":").columns
+    column_map = utilities.init_column_maps()
+    important_features = sorted(list(zip(regressor_feature_importance, x_test_columns)), key=lambda x: x[0],
                                 reverse=True)[:10]
-        import_lst = feature_importance(important_list)
-        file = open('../data/random_forest/feature_importance_' + item + '.csv', 'w+', newline='')
-        with file:
-            write = csv.writer(file)
-            write.writerows(import_lst)
-        print_save_metrics(y_test, y_pred, item)
+    readable_important_features = []
+    for feature in important_features:
+        feature = (feature[0], feature[1].replace('_imputed', ''))
+        column_map_tuple = list(filter(lambda column_name: feature[1] == column_name[0], column_map))[0]
 
-
+        readable_important_features.append((feature[0], column_map_tuple[2]))
+    file = open(f'../results/{technique}/{ov}.csv', 'w+', newline='')
+    with file:
+        write = csv.writer(file)
+        write.writerows(readable_important_features)
+    print(readable_important_features)
+    return None

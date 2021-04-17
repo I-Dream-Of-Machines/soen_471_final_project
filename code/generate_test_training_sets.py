@@ -71,11 +71,15 @@ def generate_test_train_split(output_variable, stratification_bin):
 
 def generate_preprocessed_training_test_data(features_df, ov_test_split, ov_train_split, folder_name):
     test_df = ov_test_split.join(features_df, on="School_Code", how="inner")
-    test_df.write.mode("overwrite").parquet(f"../data/test_training_data/{folder_name}/preprocessed_test_data.parquet", "overwrite")
-    test_df.toPandas().to_csv(f"../data/test_training_data/{folder_name}/preprocessed_test_data.csv", sep=":", index=False)
+    test_df.write.mode("overwrite").parquet(f"../data/test_training_data/{folder_name}/preprocessed_test_data.parquet",
+                                            "overwrite")
+    test_df.toPandas().to_csv(f"../data/test_training_data/{folder_name}/preprocessed_test_data.csv", sep=":",
+                              index=False)
     train_df = ov_train_split.join(features_df, on="School_Code", how="inner")
-    train_df.write.mode("overwrite").parquet(f"../data/test_training_data/{folder_name}/preprocessed_training_data.parquet", "overwrite")
-    train_df.toPandas().to_csv(f"../data/test_training_data/{folder_name}/preprocessed_training_data.csv", sep=":", index=False)
+    train_df.write.mode("overwrite").parquet(f"../data/test_training_data/{folder_name}/preprocessed_training_data"
+                                             f".parquet", "overwrite")
+    train_df.toPandas().to_csv(f"../data/test_training_data/{folder_name}/preprocessed_training_data.csv", sep=":",
+                               index=False)
 
 
 def generate_stratification_bins():
@@ -92,6 +96,7 @@ def generate_stratification_bins():
             strata[strata_key] = strata_bin
     return strata
 
+
 def generate_test_training_sets():
     spark = utilities.init_spark()
     features_df = spark.read.parquet(utilities.preprocessed_combined_characteristics_file_path_pq)
@@ -99,4 +104,34 @@ def generate_test_training_sets():
     for ov in strata.keys():
         test_df, train_df = generate_test_train_split(ov, strata[ov])
         generate_preprocessed_training_test_data(features_df, test_df, train_df, ov)
+
+
+"""
+Code Contribution (Shahrareh) - take from her Jupyter Notebook while combining code
+Modified by Nadia  to save generated train_test_split
+"""
+
+
+def x_y_split(ov):
+    training = pd.read_csv(f"../data/test_training_data/{ov}/final_training_data.csv", sep=':')
+    test = pd.read_csv(f"../data/test_training_data/{ov}/final_test_data.csv", sep=':')
+    y_train = training.filter(regex=ov)
+    x_train = training.drop(y_train, axis=1).drop(["School_Code"], axis=1)
+    y_test = test.filter(regex=ov)
+    x_test = test.drop(y_test, axis=1).drop(["School_Code"], axis=1)
+    x_train.to_csv(f"../data/test_training_data/{ov}/x_train.csv", sep=":", index=False)
+    y_train.to_csv(f"../data/test_training_data/{ov}/y_train.csv", sep=":", index=False)
+    x_test.to_csv(f"../data/test_training_data/{ov}/x_test.csv", sep=":", index=False)
+    y_test.to_csv(f"../data/test_training_data/{ov}/y_test.csv", sep=":", index=False)
+
+
+def generate_x_y_splits():
+    with open(utilities.output_variables_file_path) as f:
+        output_variables = f.readlines()
+        output_variables.remove("School_Code\n")
+        output_variables.remove("Town\n")
+        for ov in output_variables:
+            ov = ov.replace("\n", "")
+            x_y_split(ov)
+
 
