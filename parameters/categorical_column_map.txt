@@ -4794,14 +4794,14 @@ SC_CAT_NC_BS_07550000:District Code:District Code: 07550000
 SC_CAT_NC_BS_02140000:District Code:District Code: 02140000
 SC_CAT_NC_BS_03100000:District Code:District Code: 03100000
 SC_CAT_NC_BS_08850000:District Code:District Code: 08850000
-SC_CAT_NC_BT_Insufficient data:Accountability and Assistance Level:School Accountability and Assistance Level: Insufficient data
-SC_CAT_NC_BT_Level 1:Accountability and Assistance Level:School Accountability and Assistance Level: Level 1
-SC_CAT_NC_BT_Level 2:Accountability and Assistance Level:School Accountability and Assistance Level: Level 2
-SC_CAT_NC_BT_Level 3:Accountability and Assistance Level:School Accountability and Assistance Level: Level 3
-SC_CAT_NC_BT_Level 4:Accountability and Assistance Level:School Accountability and Assistance Level: Level 4
-SC_CAT_NC_BU_Insufficient data:District_Accountability and Assistance Level:District Accountability and Assistance Level: Insufficient data
-SC_CAT_NC_BU_Level 1:District_Accountability and Assistance Level:District Accountability and Assistance Level: Level 1
-SC_CAT_NC_BU_Level 2:District_Accountability and Assistance Level:District Accountability and Assistance Level: Level 2
-SC_CAT_NC_BU_Level 3:District_Accountability and Assistance Level:District Accountability and Assistance Level: Level 3
-SC_CAT_NC_BU_Level 4:District_Accountability and Assistance Level:District Accountability and Assistance Level: Level 4
-SC_CAT_NC_BU_Level 5:District_Accountability and Assistance Level:District Accountability and Assistance Level: Level 5
+SC_CAT_NC_BT_Insufficient_data:Accountability and Assistance Level:School Accountability and Assistance Level: Insufficient data
+SC_CAT_NC_BT_Level_1:Accountability and Assistance Level:School Accountability and Assistance Level: Level 1
+SC_CAT_NC_BT_Level_2:Accountability and Assistance Level:School Accountability and Assistance_Level: Level 2
+SC_CAT_NC_BT_Level_3:Accountability and Assistance Level:School Accountability and Assistance Level: Level 3
+SC_CAT_NC_BT_Level_4:Accountability and Assistance Level:School Accountability and Assistance Level: Level 4
+SC_CAT_NC_BU_Insufficient_data:District_Accountability and Assistance Level:District Accountability and Assistance Level: Insufficient data
+SC_CAT_NC_BU_Level_1:District_Accountability and Assistance Level:District Accountability and Assistance Level: Level 1
+SC_CAT_NC_BU_Level_2:District_Accountability and Assistance Level:District Accountability and Assistance Level: Level 2
+SC_CAT_NC_BU_Level_3:District_Accountability and Assistance Level:District Accountability and Assistance Level: Level 3
+SC_CAT_NC_BU_Level_4:District_Accountability and Assistance Level:District Accountability and Assistance Level: Level 4
+SC_CAT_NC_BU_Level_5:District_Accountability and Assistance Level:District Accountability and Assistance Level: Level 5

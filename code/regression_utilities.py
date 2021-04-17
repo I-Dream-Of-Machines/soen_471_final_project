@@ -18,7 +18,7 @@ def print_save_metrics(y_pred, technique, ov):
     mae = metrics.mean_absolute_error(y_test, y_pred)
     mse = metrics.mean_squared_error(y_test, y_pred)
     rmse = np.sqrt(metrics.mean_squared_error(y_test, y_pred))
-    with open(f"../results/{technique}/{ov}.csv", 'w', newline='') as file:
+    with open(f"../results/{technique}/metrics_{ov}.csv", 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(
             ["r2_score", "Mean Absolute Error (MAE)", 'Mean Squared Error (MSE)', 'Root Mean Squared Error (RMSE)'])
@@ -63,11 +63,18 @@ def feature_importance(regressor_feature_importance, technique, ov):
     for feature in important_features:
         feature = (feature[0], feature[1].replace('_imputed', ''))
         column_map_tuple = list(filter(lambda column_name: feature[1] == column_name[0], column_map))[0]
-
         readable_important_features.append((feature[0], column_map_tuple[2]))
-    file = open(f'../results/{technique}/{ov}.csv', 'w+', newline='')
+    file = open(f'../results/{technique}/feature_importance{ov}.csv', 'w+', newline='')
     with file:
         write = csv.writer(file)
         write.writerows(readable_important_features)
     print(readable_important_features)
     return None
+
+
+def print_save_regressor_params(regressor, technique, ov):
+    with open(f"../results/{technique}/regressor_params_{ov}.csv", 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(["parameter", "value"])
+        for param, value in regressor.get_params(deep=True).items():
+            writer.writerow([param, value])

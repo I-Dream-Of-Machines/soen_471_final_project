@@ -88,6 +88,14 @@ def init_column_maps():
             p = p.replace("\n", "")
             p = tuple(p.split(":"))
             column_maps.append(p)
+    with open(categorical_column_map_file_path) as cf:
+        parameters = cf.readlines()
+        for p in parameters:
+            p = p.replace("\n", "")
+            p = p.split(":")
+            p[0] = p[0].replace(" ", "_")
+            p = tuple(p)
+            column_maps.append(p)
     return column_maps
 
 
