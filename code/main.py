@@ -19,7 +19,9 @@ def main():
     #encode_and_impute_data.encode_and_inmpute_data()
     #regression_utilities.regress_base_line()
     #generate_test_training_sets.generate_x_y_splits()
-    decision_tree_regression.baseline_decision_tree_regression()
+    #decision_tree_regression.baseline_decision_tree_regression()
+    #decision_tree_regression.print_and_save_decision_trees("dt_baseline")
+    decision_tree_regression.hyper_parameter_tuning_decision_tree_regression()
 
 
 

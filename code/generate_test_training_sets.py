@@ -125,8 +125,6 @@ def x_y_split(ov, source):
     y_test.to_csv(f"../data/test_training_data/{ov}/y_test.csv", sep=":", index=False)
 
 
-
-
 def generate_x_y_splits():
     with open(utilities.output_variables_file_path) as f:
         output_variables = f.readlines()

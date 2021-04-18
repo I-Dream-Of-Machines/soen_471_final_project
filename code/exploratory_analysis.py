@@ -92,4 +92,5 @@ def generate_schools_per_town():
 
 
 def generate_heat_map(ov, x_train):
+    print("Hello")
     # Generate heat map for
