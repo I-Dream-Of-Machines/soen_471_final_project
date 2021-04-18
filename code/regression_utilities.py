@@ -36,10 +36,10 @@ Refactored by Nadia to ensure usability for both Random Forests and Decision Tre
 """
 
 
-def regress(regressor, technique, ov):
-    x_train = pd.read_csv(f"../data/test_training_data/{ov}/x_train.csv", sep=":")
+def regress_ov(regressor, technique, ov, x_train, x_test):
+    x_train = pd.read_csv(f"../data/test_training_data/{ov}/{x_train}.csv", sep=":")
     y_train = pd.read_csv(f"../data/test_training_data/{ov}/y_train.csv", sep=":")
-    x_test = pd.read_csv(f"../data/test_training_data/{ov}/x_test.csv", sep=":")
+    x_test = pd.read_csv(f"../data/test_training_data/{ov}/{x_test}.csv", sep=":")
     regressor.fit(x_train, y_train)
     y_pred = regressor.predict(x_test)
     with open(f'../models/{technique}/{ov}.pkl', 'wb') as model_file:
@@ -81,14 +81,14 @@ def print_save_regressor_params(regressor, technique, ov):
             writer.writerow([param, value])
 
 
-def baseline_regress(regressor, technique):
+def regress(regressor, technique, x_train, x_test):
     with open(utilities.output_variables_file_path) as f:
         output_variables = f.readlines()
         output_variables.remove("School_Code\n")
         output_variables.remove("Town\n")
         for ov in output_variables:
             ov = ov.replace("\n", "")
-            regressor, y_pred = regress(regressor, technique, ov)
+            regressor, y_pred = regress_ov(regressor, technique, ov, x_train, x_test)
             print_save_metrics(y_pred, technique, ov)
             feature_importance(regressor.feature_importances_, technique, ov)
             print_save_regressor_params(regressor, technique, ov)
