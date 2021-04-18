@@ -21,6 +21,7 @@ def main():
     #generate_test_training_sets.generate_x_y_splits()
     #decision_tree_regression.baseline_decision_tree_regression()
     #decision_tree_regression.print_and_save_decision_trees("dt_baseline")
+    decision_tree_regression.print_and_save_decision_trees("dt_tuned")
     decision_tree_regression.hyper_parameter_tuning_decision_tree_regression()
 
 
