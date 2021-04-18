@@ -112,7 +112,7 @@ Modified by Nadia  to save generated train_test_split
 """
 
 
-def x_y_split(ov):
+def x_y_split(ov, source):
     training = pd.read_csv(f"../data/test_training_data/{ov}/final_training_data.csv", sep=':')
     test = pd.read_csv(f"../data/test_training_data/{ov}/final_test_data.csv", sep=':')
     y_train = training.filter(regex=ov)
@@ -123,6 +123,8 @@ def x_y_split(ov):
     y_train.to_csv(f"../data/test_training_data/{ov}/y_train.csv", sep=":", index=False)
     x_test.to_csv(f"../data/test_training_data/{ov}/x_test.csv", sep=":", index=False)
     y_test.to_csv(f"../data/test_training_data/{ov}/y_test.csv", sep=":", index=False)
+
+
 
 
 def generate_x_y_splits():

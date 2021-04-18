@@ -5,7 +5,26 @@ from sklearn import metrics
 from sklearn.model_selection import GridSearchCV
 import csv
 import pickle as pk
-import os
+
+
+"""
+Based on Shahreh's function random_forest()
+Refactored by Nadia to ensure usability for both Random Forests and Decision Trees
+"""
+
+
+def regress_ov(regressor, technique, ov, x_train, x_test):
+    x_train = pd.read_csv(f"../data/test_training_data/{ov}/{x_train}.csv", sep=":")
+    y_train = pd.read_csv(f"../data/test_training_data/{ov}/y_train.csv", sep=":")
+    x_test = pd.read_csv(f"../data/test_training_data/{ov}/{x_test}.csv", sep=":")
+    regressor.fit(x_train, y_train)
+    y_pred = regressor.predict(x_test)
+    with open(f'../models/{technique}/{ov}.pkl', 'wb') as model_file:
+        pk.dump(regressor, model_file)
+    with open(f'../results/{technique}/{ov}.pkl', 'wb') as prediction_file:
+        pk.dump(y_pred, prediction_file)
+    return regressor, y_pred
+
 
 """
 Code Contribution (Shahrareh) - take from her Jupyter Notebook while combining code 
@@ -28,25 +47,6 @@ def print_save_metrics(y_pred, technique, ov):
     print('Mean Absolute Error (MAE):' + ov, mae)
     print('Mean Squared Error (MSE):' + ov, mse)
     print('Root Mean Squared Error (RMSE):' + ov, rmse)
-
-
-"""
-Based on Shahreh's function random_forest()
-Refactored by Nadia to ensure usability for both Random Forests and Decision Trees
-"""
-
-
-def regress_ov(regressor, technique, ov, x_train, x_test):
-    x_train = pd.read_csv(f"../data/test_training_data/{ov}/{x_train}.csv", sep=":")
-    y_train = pd.read_csv(f"../data/test_training_data/{ov}/y_train.csv", sep=":")
-    x_test = pd.read_csv(f"../data/test_training_data/{ov}/{x_test}.csv", sep=":")
-    regressor.fit(x_train, y_train)
-    y_pred = regressor.predict(x_test)
-    with open(f'../models/{technique}/{ov}.pkl', 'wb') as model_file:
-        pk.dump(regressor, model_file)
-    with open(f'../results/{technique}/{ov}.pkl', 'wb') as prediction_file:
-        pk.dump(y_pred, prediction_file)
-    return regressor, y_pred
 
 
 """
@@ -81,7 +81,7 @@ def print_save_regressor_params(regressor, technique, ov):
             writer.writerow([param, value])
 
 
-def regress(regressor, technique, x_train, x_test):
+def regress(regressor, technique, x_train, x_test, feature_importance):
     with open(utilities.output_variables_file_path) as f:
         output_variables = f.readlines()
         output_variables.remove("School_Code\n")
@@ -90,11 +90,12 @@ def regress(regressor, technique, x_train, x_test):
             ov = ov.replace("\n", "")
             regressor, y_pred = regress_ov(regressor, technique, ov, x_train, x_test)
             print_save_metrics(y_pred, technique, ov)
-            feature_importance(regressor.feature_importances_, technique, ov)
+            if feature_importance:
+                feature_importance(regressor.feature_importances_, technique, ov)
             print_save_regressor_params(regressor, technique, ov)
 
 
-def hyper_parameter_tuning(p_grid, regressor, ov, technique):
+def hyper_parameter_tuning_ov(p_grid, regressor, ov, technique):
     x_train = pd.read_csv(f"../data/test_training_data/{ov}/x_train.csv", sep=":")
     y_train = pd.read_csv(f"../data/test_training_data/{ov}/y_train.csv", sep=":")
     x_test = pd.read_csv(f"../data/test_training_data/{ov}/x_test.csv", sep=":")
@@ -106,7 +107,7 @@ def hyper_parameter_tuning(p_grid, regressor, ov, technique):
     best_regressor = grid.best_estimator_
     y_pred = best_regressor.predict(x_test)
     with open(f'../models/{technique}/{ov}.pkl', 'wb') as model_file:
-        pk.dump(regressor, model_file)
+        pk.dump(best_regressor, model_file)
     with open(f'../results/{technique}/{ov}.pkl', 'wb') as prediction_file:
         pk.dump(y_pred, prediction_file)
     print_save_metrics(y_pred, technique, ov)

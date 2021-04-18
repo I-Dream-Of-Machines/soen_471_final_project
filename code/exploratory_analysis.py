@@ -1,8 +1,5 @@
 import matplotlib.pyplot as plt
 import math
-from pyspark.rdd import RDD
-from pyspark.sql import DataFrame
-from pyspark.sql import SparkSession
 from tabulate import tabulate
 import utilities
 
@@ -92,3 +89,7 @@ def generate_schools_per_town():
     school_df = spark.read.parquet("../data/school_characteristics.parquet")
     with open("../figures/Count_Of_School_Town.txt", "x") as f:
         f.write(tabulate(school_df.groupBy("Town").count().orderBy("count").toPandas(), headers=["Town", "Count of Schools"]))
+
+
+def generate_heat_map(ov, x_train):
+    # Generate heat map for
