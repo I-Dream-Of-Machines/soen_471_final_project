@@ -19,7 +19,7 @@ def main():
     #encode_and_impute_data.encode_and_inmpute_data()
     #regression_utilities.regress_base_line()
     #generate_test_training_sets.generate_x_y_splits()
-    decision_tree_regression.regress_baseline_decision_tree()
+    decision_tree_regression.baseline_decision_tree_regression()
 
 
 

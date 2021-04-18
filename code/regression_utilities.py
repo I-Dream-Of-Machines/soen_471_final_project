@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import utilities
 from sklearn import metrics
+from sklearn.model_selection import GridSearchCV
 import csv
 import pickle as pk
 import os
@@ -78,3 +79,36 @@ def print_save_regressor_params(regressor, technique, ov):
         writer.writerow(["parameter", "value"])
         for param, value in regressor.get_params(deep=True).items():
             writer.writerow([param, value])
+
+
+def baseline_regress(regressor, technique):
+    with open(utilities.output_variables_file_path) as f:
+        output_variables = f.readlines()
+        output_variables.remove("School_Code\n")
+        output_variables.remove("Town\n")
+        for ov in output_variables:
+            ov = ov.replace("\n", "")
+            regressor, y_pred = regress(regressor, technique, ov)
+            print_save_metrics(y_pred, technique, ov)
+            feature_importance(regressor.feature_importances_, technique, ov)
+            print_save_regressor_params(regressor, technique, ov)
+
+
+def hyper_parameter_tuning(p_grid, regressor, ov, technique):
+    x_train = pd.read_csv(f"../data/test_training_data/{ov}/x_train.csv", sep=":")
+    y_train = pd.read_csv(f"../data/test_training_data/{ov}/y_train.csv", sep=":")
+    x_test = pd.read_csv(f"../data/test_training_data/{ov}/x_test.csv", sep=":")
+    grid = GridSearchCV(estimator=regressor,
+                        param_grid=p_grid,
+                        cv=10,
+                        n_jobs=6)
+    grid.fit(x_train, y_train)
+    best_regressor = grid.best_estimator_
+    y_pred = best_regressor.predict(x_test)
+    with open(f'../models/{technique}/{ov}.pkl', 'wb') as model_file:
+        pk.dump(regressor, model_file)
+    with open(f'../results/{technique}/{ov}.pkl', 'wb') as prediction_file:
+        pk.dump(y_pred, prediction_file)
+    print_save_metrics(y_pred, technique, ov)
+    feature_importance(best_regressor.feature_importances_, technique, ov)
+    print_save_regressor_params(best_regressor, technique, ov)
