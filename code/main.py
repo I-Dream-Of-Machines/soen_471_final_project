@@ -16,8 +16,7 @@ def main():
     #generate_test_training_sets.combine_census_features()
     #generate_test_training_sets.combine_all_features()
     #generate_test_training_sets.generate_test_training_sets()
-    #encode_and_impute_data.encode_and_inmpute_data()
-    #regression_utilities.regress_base_line()
+    #encode_and_impute_data.encode_and_impute_data()
     #generate_test_training_sets.generate_x_y_splits()
     #decision_tree_regression.baseline_decision_tree_regression()
     #decision_tree_regression.print_and_save_decision_trees("dt_baseline")
@@ -25,12 +24,6 @@ def main():
     #decision_tree_regression.print_and_save_decision_trees("dt_tuned")
     #decision_tree_regression.baseline_pca_decision_tree_regression()
     
-
-
-
-
-
-
 
 
 
