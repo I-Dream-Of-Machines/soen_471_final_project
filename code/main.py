@@ -7,6 +7,8 @@ import regression_utilities
 import decision_tree_regression
 import numpy as np
 import pandas as pd
+import pca
+import random_forest_regression
 
 
 def main():
@@ -23,7 +25,8 @@ def main():
     #decision_tree_regression.hyper_parameter_tuning_decision_tree_regression()
     #decision_tree_regression.print_and_save_decision_trees("dt_tuned")
     #decision_tree_regression.baseline_pca_decision_tree_regression()
-    
+    # random_forest_regression.baseline_pca_random_forest_regression()
+    # pca.perform_pca()
 
 
 
