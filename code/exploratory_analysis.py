@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import math
 from tabulate import tabulate
 import utilities
+import seaborn as sns
+import pandas as pd
 
 
 def generate_histograms_for_output_variable():
@@ -91,6 +93,11 @@ def generate_schools_per_town():
         f.write(tabulate(school_df.groupBy("Town").count().orderBy("count").toPandas(), headers=["Town", "Count of Schools"]))
 
 
-def generate_heat_map(ov, x_train):
-    print("Hello")
-    # Generate heat map for
+def generate_heat_map(ov,x_train):
+
+    x_num_train = pd.read_csv(f"../data/test_training_data/{ov}/{x_train}.csv", sep=':')
+    corr_pearson = x_num_train.corr(method='pearson')
+    # print(x_num_train)
+    heat=sns.heatmap(corr_pearson)
+    plt.savefig(f'../figures/PCA_OP/heatmap_{x_train}' + ov, dpi=400)
+    plt.close()
